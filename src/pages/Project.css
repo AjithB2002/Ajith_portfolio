@@ -1,0 +1,23 @@
+#Project{
+    background-color: rgb(25, 27, 48);
+    padding-top: 110px;
+}
+.project{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(193, 246, 255);
+   }
+   
+.procard {
+    
+    box-shadow: rgb(61, 255, 242) 0px 0px 0px 5px, rgb(61, 255, 242) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+ 
+   
+}
+   .procard:hover {
+    color: #ffffff;
+    transform: scale(1.025);
+    background-color: #080073;
+    box-shadow: rgb(250, 255, 251) 0px 0px 0px 5px, rgb(250, 255, 251) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}

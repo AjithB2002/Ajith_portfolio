@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+
+#neubar {
+    background-color: #000000;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .nav-item .active {
+    border-radius: 6px;
+    background: linear-gradient(145deg, #4eff98, #5f1aff);
+    box-shadow:  4px 4px 8px #29a1fd,
+                 -4px -4px 8px #3bbcf8;
+    color: rgb(255,215,0);             
+  }
+.logo{
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  padding: 7px ;
+}
+.container-fluid ul li a{
+  color: rgb(255,215,0);
+}
+

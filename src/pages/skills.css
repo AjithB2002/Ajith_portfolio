@@ -1,0 +1,47 @@
+#Skills{
+    background-color: rgb(25, 27, 48);
+    padding-top: 100px;
+}
+.skills{
+ font-weight: bold;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: 50px;
+ color: rgb(193, 246, 255);
+}
+
+.TECHNICAL{
+color: rgb(163, 163, 163);
+}
+
+.techskill{
+    color:rgb(114, 237, 237);
+}
+.javalogo,.htmllogo,.jslogo,.reactlogo,.csslogo,.bootstraplogo,.springlogo,.mysqllogo{
+    width: 160px;
+    height: auto;
+    border: 5px solid rgb(0, 255, 132);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.JAVA{
+    width: 85%;
+}
+.CSS3{
+    width: 90%;
+}
+.HTML5,.Bootstrap{
+    width: 100%;
+}
+.js{
+    width: 70%;
+}
+.React{
+    width: 75%;
+}
+.SpringBoot{
+    width: 75%;
+}
+.SQL{
+    width: 80%;
+}

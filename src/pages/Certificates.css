@@ -1,0 +1,33 @@
+#Certificates{
+    background-color: rgb(25, 27, 48);
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+.certificates{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(193, 246, 255);
+   }
+.certificationcarousel{
+    padding-top: 60px;
+}
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: rgb(255, 255, 255);
+    background-color: rgb(150, 93, 93);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+}
+.carousel-item > img {
+ 
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 44rem;
+    margin: 0 auto;
+  }
