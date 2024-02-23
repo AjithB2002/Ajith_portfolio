@@ -1,5 +1,5 @@
 import React from "react";
-import '../pages/Skills.css';
+import '../pages/Skills1.css';
 
 import javalogo from '../assets/java-logo.jpg';
 import csslogo from '../assets/css3-logo.png';
