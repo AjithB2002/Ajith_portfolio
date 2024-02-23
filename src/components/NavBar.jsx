@@ -10,7 +10,7 @@ function NavigationBar() {
   return(
     <nav className="navbar navbar-expand-lg navbar-dark p-3 " data-bs-theme="dark" id='neubar'>
     <div className="container-fluid">
-      <Link className="navbar-brand logo" to="/"> <img src={Logo}  alt="Logo"  width="85px" height="auto"/></Link>
+      <Link className="navbar-brand logo" to="Ajith_portfolio/"> <img src={Logo}  alt="Logo"  width="85px" height="auto"/></Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -18,7 +18,7 @@ function NavigationBar() {
       <div className=" collapse navbar-collapse " id="navbarNavDropdown">
         <ul className="navbar-nav ms-auto mt-sm-2 ">
         <li className="nav-item">
-              <Link className="nav-link mx-2 active " aria-current="page" to="/">Home</Link>
+              <Link className="nav-link mx-2 active " aria-current="page" to="Ajith_portfolio/">Home</Link>
             </li>
           <li className="nav-item">
             <Link className="nav-link mx-2 " to="/skills">Skills</Link>
