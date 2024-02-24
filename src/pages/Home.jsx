@@ -32,7 +32,7 @@ function Home() {
                                     <p><FontAwesomeIcon icon={faPhone} /> Contact No:</p>
                                     <p className='h5'> <Link className="link-light text-decoration-none" to="tel:8870280961">+91 8870280961</Link></p>
                                    
-                                    <Link to="/Contact">  <button className="btn btn-outline-info btn-large mt-3 ">Hire Me!</button></Link>
+                                    <Link to="/contact">  <button className="btn btn-outline-info btn-large mt-3 ">Hire Me!</button></Link>
                                 </div>
                             </div>
                         </div>
