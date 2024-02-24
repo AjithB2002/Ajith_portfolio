@@ -16,9 +16,9 @@ function Home() {
         <>
             <section id="Home">
                 <div className="container">
-                    <div className="row pt-5">
+                    <div className="row pt-5 ">
                         <div className="col-md-8 ">
-                            <h3>Hi, It's Me</h3>
+                            <h3 >Hi, It's Me</h3>
                             <h1 className='name'><span className='firstletter'>A</span>jith B</h1>
                             <h2 className='name1'>And I'm a <span className='animate-charcter'>Full Stack Developer</span></h2>
                             <p className='fs-5 mt-2'>Diligent and enthusiastic Full Stack Developer with additional skills in Java Programming and Database Management. Eager to leverage my skills and contribute to dynamic projects. Collaborative team player with passion for problem-solving.</p>
@@ -32,7 +32,7 @@ function Home() {
                                     <p><FontAwesomeIcon icon={faPhone} /> Contact No:</p>
                                     <p className='h5'> <Link className="link-light text-decoration-none" to="tel:8870280961">+91 8870280961</Link></p>
                                    
-                                    <Link to="Contact">  <button className="btn btn-outline-info btn-large mt-3 ">Hire Me!</button></Link>
+                                    <Link to="/Contact">  <button className="btn btn-outline-info btn-large mt-3 ">Hire Me!</button></Link>
                                 </div>
                             </div>
                         </div>
