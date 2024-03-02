@@ -13,6 +13,7 @@ import { faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Home() { 
     return (
+        
         <>
             <section id="Home">
                 <div className="container">
