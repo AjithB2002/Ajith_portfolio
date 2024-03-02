@@ -3,7 +3,7 @@ import '../pages/Home.css';
 import Ajith from '../assets/Ajith.jpg';
 import Skills from '../pages/Skills';
 import Project from '../pages/Project';
-import resume from '../assets/Resume.pdf';
+import Resume from '../assets/Resume.pdf';
 import Certificates from '../pages/Certificates';
 import Contact from '../pages/Contact';
 import Copyright from '../pages/Copyright';
@@ -26,7 +26,7 @@ function Home() {
                                 <div className='col-6'>
                                     <p><FontAwesomeIcon icon={faEnvelope} /> Email:</p>
                                     <p className='h5'> <Link className="link-light text-decoration-none" to="mailto:ajithbl7474@gmail.com">ajithbl7474@gmail.com</Link></p>
-                                    < Link id="pdf-link" to={resume} className='btn btn-info btn-large mt-3' target="_blank" download="Ajith B - resume.pdf">Download CV</Link>
+                                    < Link id="pdf-link" to={Resume} className='btn btn-info btn-large mt-3' target="_blank" download="Ajith B - Resume.pdf">Download CV</Link>
                                 </div>
                                 <div className='col-6 '>
                                     <p><FontAwesomeIcon icon={faPhone} /> Contact No:</p>
