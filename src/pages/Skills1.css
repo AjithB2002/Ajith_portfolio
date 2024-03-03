@@ -16,12 +16,13 @@ color: rgb(163, 163, 163);
 .techskill{
     color:rgb(114, 237, 237);
 }
-.javalogo,.htmllogo,.jslogo,.reactlogo,.csslogo,.bootstraplogo,.springlogo,.mysqllogo{
+.javalogo,.htmllogo,.jslogo,.reactlogo,.csslogo,.bootstraplogo,.springlogo,.mysqllogo,.postgresqllogo,.nodejslogo{
     width: 160px;
     height: auto;
     border: 5px solid rgb(0, 255, 132);
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
+    
 }
 
 .JAVA{
@@ -44,4 +45,24 @@ color: rgb(163, 163, 163);
 }
 .SQL{
     width: 80%;
+}
+.postgresql{
+    width: 70%;
+}
+.nodejs{
+    width: 75%;
+}
+
+.stylecard{
+    box-shadow: 0 0px 10px 0 rgb(0, 255, 221);
+    background-color: rgb(25, 27, 48) !important;
+    transition: 0.7s;
+    padding-top: 13px;
+}
+
+.titledesign{
+    font-weight: bold;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: 50px;
+ color: rgb(255,215,0);
 }

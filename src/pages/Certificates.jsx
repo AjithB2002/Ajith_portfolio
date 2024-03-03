@@ -12,7 +12,7 @@ function Certificates() {
         <>
             <section id="Certificates">
                 <div className="container text-center pt-5">
-                    <h1 className="text-center certificates">CERTIFICATES</h1>
+                    <h1 className="text-center certificates"><span className="titledesign">C</span>ERTIFICATES</h1>
                     <div id="carouselExampleDark" className="carousel carousel-dark slide  certificationcarousel">
                         <div className="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

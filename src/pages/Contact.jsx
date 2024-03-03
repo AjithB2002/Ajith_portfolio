@@ -10,7 +10,7 @@ function Contact() {
         <>
             <section id="Contact">
                 <div className="container text-center pt-5">
-                    <h1 className="text-center certificates">CONTACT</h1>
+                    <h1 className="text-center certificates"><span className="titledesign">C</span>ONTACT</h1>
                 </div>
             <section className=" py-3 py-md-5 py-xl-8 ">
                 <div className="container formedit py-2">
@@ -81,7 +81,7 @@ function Contact() {
                                             <textarea className="form-control" id="message" name="message" rows="3" required></textarea>
                                         </div>
                                         <div className="col-12">
-                                            <div className="d-grid buttonedit">
+                                            <div className="d-grid contactbuttonedit">
                                                 <button className="btn btn-lg" type="submit">Send Message</button>
                                             </div>
                                         </div>
