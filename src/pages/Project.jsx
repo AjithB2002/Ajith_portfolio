@@ -11,6 +11,8 @@ import miniproject from '../assets/Mini project.pdf';
 import patrolpdf from '../assets/Patrol_Robot.pdf';
 import portfolio from '../assets/portfolio.png';
 import portfolio1 from '../assets/portfolio1.png';
+import weather1 from '../assets/weather app 1.png';
+import weather2 from '../assets/weather app 2.png';
 import ourteam from '../assets/Our team.jpg';
 import { Link } from "react-router-dom";
 
@@ -24,15 +26,47 @@ function Project() {
           {/* --------------------------------- */}
           <div className="row row-cols-1 row-cols-md-4 g-5 pt-5">
             {/* ........... */}
-
+            <div className="col">
+              <div className="card h-100 procard">
+                <img src={weather2} alt="Webite demo" className="card-img-top " />
+                <img src={weather1} alt="Webite demo" className="card-img-top " />
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                  show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
+                </button>
+                <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fw-bold fs-3" id="exampleModalLabel">BL GLOBAL WEATHER GUIDE APPLICATION</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div> 
+                      <div className="modal-body">
+                        <p className="card-text">The Weather Application utilizes the OpenWeather API to access accurate and timely weather data. </p>
+                        <p className="card-text"> The Weather Application keeps you updated with real-time weather forecasts tailored to your location and preferences. Whether you're planning your day, a weekend getaway, or a business trip. </p>
+                        <p className="card-text">  Additionally, users have the flexibility to search for weather details of any city worldwide, ensuring comprehensive access to weather information. </p>
+                        <p className="card-text"><span className="fw-bold">Skillset:</span> HTML5, CSS3, Bootstrap , JavaScript, React js and Open Weather API</p>
+                        <div className="d-flex justify-content-evenly ">
+                          <a className="btn projectbutton" href="https://github.com/AjithB2002/BL_Weather" target="_blank" role="button">GitHub Link<FontAwesomeIcon icon={faBook} className="fa-fade px-2 " /></a>
+                          <a className="btn projectbutton " href="https://ajithb2002.github.io/BL_Weather/" target="_blank" role="button">Demo<FontAwesomeIcon icon={faPaperPlane} className="fa-fade px-2 " /></a>
+                        </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* ........... */}
             <div className="col">
               <div className="card h-100 procard">
                 <img src={portfolio} alt="Webite demo" className="card-img-top " />
                 <img src={portfolio1} alt="Webite demo" className="card-img-top " />
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -55,19 +89,16 @@ function Project() {
                 </div>
               </div>
             </div>
-
-
-
             {/* ....... */}
 
             <div className="col">
               <div className="card h-100  procard">
                 <img src={hotelbooking} alt="Webite demo" className="card-img-top " />
                 <img src={hotelbooking1} alt="Webite demo" className="card-img-top  " />
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -96,10 +127,10 @@ function Project() {
             <div className="col">
               <div className="card h-100 procard">
                 <img src={stockproject} alt="demo img" className="card-img-top " width={"120px"} />
-                <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal4">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal4" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -116,10 +147,10 @@ function Project() {
 
                         <p className="card-text"> <span className="fw-bold">HTML5 CSS3 Bootstrap:</span> Design the frontend of your web application using HTML5 for structure and Bootstrap CSS3 for responsive and visually appealing layouts. Bootstrap will help ensure your application looks good and functions well across various devices and screen sizes.</p>
                         <p className="card-text">   <span className="fw-bold">Java Script:</span> Enhance user interactivity and functionality with JavaScript. You can use JavaScript to create dynamic elements, handle user inputs, and implement client-side validation.</p>
-                      
+
                         <div className="d-grid projectbutton">
-                        <a className="btn " href={miniproject} target="_blank" role="button"> View Details <FontAwesomeIcon icon={faPaperPlane} className="fa-fade px-2 " /></a>
-                                            </div>
+                          <a className="btn " href={miniproject} target="_blank" role="button"> View Details <FontAwesomeIcon icon={faPaperPlane} className="fa-fade px-2 " /></a>
+                        </div>
 
                       </div>
                       <div className="modal-footer">
@@ -139,11 +170,11 @@ function Project() {
             <div className="col">
               <div className="card h-100 procard">
                 <Link to={patrolpdf} target="_blank"><img src={patrolrobot} alt="patrol robot" className="card-img-top" /></Link>
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
 
-                <div className="modal fade" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal5" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -155,9 +186,9 @@ function Project() {
                         <p className="card-text"><span className="fw-bold pt-2">Skill set:</span> Python,Face Recognition, Raspberry Pi, Pi Cam, node MCU, GPS module.</p>
 
 
-                       <div className="d-grid projectbutton">
-                       <a className="btn  " href={ourteam} target="_blank" role="button">OUR TEAM<FontAwesomeIcon icon={faPeopleGroup} className="fa-fade px-2 " /></a>
-                       </div>
+                        <div className="d-grid projectbutton">
+                          <a className="btn  " href={ourteam} target="_blank" role="button">OUR TEAM<FontAwesomeIcon icon={faPeopleGroup} className="fa-fade px-2 " /></a>
+                        </div>
 
                         <div className="d-flex justify-content-evenly pt-4">
                           <a className="btn projectbutton " href="https://github.com/AjithB2002/Patrol_Robot" target="_blank" role="button">GitHub Link<FontAwesomeIcon icon={faBook} className="fa-fade px-2 " /></a>
