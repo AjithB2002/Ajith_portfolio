@@ -13,6 +13,8 @@ import portfolio from '../assets/portfolio.png';
 import portfolio1 from '../assets/portfolio1.png';
 import weather1 from '../assets/weather app 1.png';
 import weather2 from '../assets/weather app 2.png';
+import moviebooking1 from '../assets/movie booking 1.png';
+import moviebooking2 from '../assets/movie booking 2.png';
 import ourteam from '../assets/Our team.jpg';
 import { Link } from "react-router-dom";
 
@@ -25,6 +27,38 @@ function Project() {
           <h1 className="text-center project"><span className="titledesign">P</span>ROJECTS</h1>
           {/* --------------------------------- */}
           <div className="row row-cols-1 row-cols-md-4 g-5 pt-5">
+            {/* .............. */}
+            <div className="col">
+              <div className="card h-100 procard">
+                <img src={moviebooking1} alt="Webite demo" className="card-img-top " />
+                <img src={moviebooking2} alt="Webite demo" className="card-img-top " />
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                  show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
+                </button>
+                <div className="modal fade" id="exampleModal5" tabIndex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fw-bold fs-3" id="exampleModalLabel5">BL MOVIE TICKET BOOKING WEBSITE</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div> 
+                      <div className="modal-body">
+                        <p className="card-text">The movie ticket booking website allows users to easily browse movies, check showtimes at nearby theaters, select seats, and purchase tickets online.</p>
+                        <p className="card-text">It provides convenience by eliminating the need to visit theaters in person and offers options for different preferences, like choosing seats in advance and checking movie details. Users can create accounts for quicker bookings and enjoy features like notifications for confirmed bookings. Overall, it simplifies the process of planning and enjoying a trip to the movies.  </p>
+                        <p className="card-text"><span className="fw-bold">Skillset:</span> HTML5, CSS3, Bootstrap , JavaScript, React js ,Springboot, PostgreSQL and TMDB Database</p>
+                        <div className="d-flex justify-content-evenly ">
+                          <a className="btn projectbutton" href="https://github.com/AjithB2002/Movie_Ticket_Booking" target="_blank" role="button">GitHub Link<FontAwesomeIcon icon={faBook} className="fa-fade px-2 " /></a>
+                          <a className="btn projectbutton " href="https://ajithb2002.github.io/Movie_Ticket_Booking/" target="_blank" role="button">Demo<FontAwesomeIcon icon={faPaperPlane} className="fa-fade px-2 " /></a>
+                        </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* ........... */}
             <div className="col">
               <div className="card h-100 procard">
