@@ -32,7 +32,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">JAVA</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="50">
-                                        <div className="progress-bar bg-info text-dark JAVA" >85%</div>
+                                        <div className="progress-bar bg-info text-dark JAVA" >100%</div>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light ">CSS3</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark CSS3" >90%</div>
+                                        <div className="progress-bar bg-info text-dark CSS3" >100%</div>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">Java Script</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark js" >70%</div>
+                                        <div className="progress-bar bg-info text-dark js" >80%</div>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">React js</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark React" >75%</div>
+                                        <div className="progress-bar bg-info text-dark React" >95%</div>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">SpringBoot</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark SpringBoot" >75%</div>
+                                        <div className="progress-bar bg-info text-dark SpringBoot" >85%</div>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">My SQL</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark SQL" >80%</div>
+                                        <div className="progress-bar bg-info text-dark SQL" >100%</div>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ function Skills() {
                                 <div className="card-body">
                                     <h4 className="text-light">Postgre SQL</h4>
                                     <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar bg-info text-dark postgresql" >70%</div>
+                                        <div className="progress-bar bg-info text-dark postgresql" >100%</div>
                                     </div>
                                 </div>
                             </div>

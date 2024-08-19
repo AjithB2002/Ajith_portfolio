@@ -26,28 +26,28 @@ color: rgb(163, 163, 163);
 }
 
 .JAVA{
-    width: 85%;
+    width: 100%;
 }
 .CSS3{
-    width: 90%;
+    width: 100%;
 }
 .HTML5,.Bootstrap{
     width: 100%;
 }
 .js{
-    width: 70%;
-}
-.React{
-    width: 75%;
-}
-.SpringBoot{
-    width: 75%;
-}
-.SQL{
     width: 80%;
 }
+.React{
+    width: 95%;
+}
+.SpringBoot{
+    width: 85%;
+}
+.SQL{
+    width: 100%;
+}
 .postgresql{
-    width: 70%;
+    width: 100%;
 }
 .nodejs{
     width: 75%;
