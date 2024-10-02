@@ -16,6 +16,10 @@ import weather2 from '../assets/weather app 2.png';
 import moviebooking1 from '../assets/movie booking 1.png';
 import moviebooking2 from '../assets/movie booking 2.png';
 import ourteam from '../assets/Our team.jpg';
+import todo from '../assets/todolist.png';
+import todo1 from '../assets/todolist1.png';
+import nodejscrud from '../assets/nodejs_crud.png';
+import nodejscrud1 from '../assets/nodejs_crud1.png';
 import { Link } from "react-router-dom";
 
 function Project() {
@@ -27,21 +31,104 @@ function Project() {
           <h1 className="text-center project"><span className="titledesign">P</span>ROJECTS</h1>
           {/* --------------------------------- */}
           <div className="row row-cols-1 row-cols-md-4 g-5 pt-5">
+            {/* ................... */}
+            <div className="col">
+              <div className="card h-100 procard">
+                <img src={todo1} alt="Webite demo" className="card-img-top " />
+                <img src={todo} alt="Webite demo" className="card-img-top " />
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+                  show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
+                </button>
+                <div className="modal fade" id="exampleModal8" tabIndex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fw-bold fs-3" id="exampleModalLabel5">FULL STACK TASK MANAGEMENT APPLICATION</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <p className="card-text">
+                          Developed a task management application using <strong>React.js</strong> for the frontend and <strong>Spring Boot</strong> for the backend.
+                          Implemented CRUD operations for tasks, enabling users to create, edit, update, and delete tasks.
+                          Integrated <strong>MongoDB</strong> for database storage and seamless data management.
+                        </p>
+                        <p className="card-text">
+                          Designed a responsive user interface for optimal performance across various devices.
+                          Deployed the frontend using <strong>GitHub Pages</strong>, with backend services connected via a REST API.
+                          Utilized <strong>Git</strong> for version control and <strong>Postman</strong> for API testing during the development process.
+                        </p>
+                        <p className="card-text">
+                          <span className="fw-bold">Skillset:</span> HTML5, CSS3, Bootstrap, JavaScript, React.js, Spring Boot, MongoDB
+                        </p>
+
+                        <div className="d-flex justify-content-evenly ">
+                          <a className="btn projectbutton" href="https://github.com/AjithB2002/Todolist" target="_blank" role="button">GitHub Link<FontAwesomeIcon icon={faBook} className="fa-fade px-2 " /></a>
+                          <a className="btn projectbutton " href="https://ajithb2002.github.io/Todolist/" target="_blank" role="button">Demo<FontAwesomeIcon icon={faPaperPlane} className="fa-fade px-2 " /></a>
+                        </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* ................... */}
+            <div className="col">
+              <div className="card h-100 procard">
+                <img src={nodejscrud} alt="Webite demo" className="card-img-top " />
+                <img src={nodejscrud1} alt="Webite demo" className="card-img-top " />
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                  show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
+                </button>
+                <div className="modal fade" id="exampleModal7" tabIndex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fw-bold fs-3 " id="exampleModalLabel5">ROBUST NODE.JS API WITH MONGODB RATE LIMITING AND SECURE AUTHENTICATION</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <p className="card-text">
+                          Developed a robust RESTful API utilizing <strong>Node.js</strong> and <strong>MongoDB</strong> to implement essential backend functionalities.
+                          The project features comprehensive <strong>MongoDB connection handling</strong> with robust exception management to address connection errors and return appropriate HTTP status codes.
+                          Implemented <strong>API rate limiting</strong> to handle a maximum of 10 requests per minute per user, ensuring system stability; when the limit is exceeded, the API responds with a clear message indicating that rate limits have been reached.
+                        </p>
+                        <p className="card-text">
+                          Integrated secure <strong>API authentication</strong> mechanisms to protect endpoints, ensuring only authorized users can access specific resources.
+                          Enabled comprehensive <strong>CRUD operations</strong> for effective data management.
+                        </p>
+
+
+                        <p className="card-text"><span className="fw-bold">Skillset:</span> Node js ,Postman, Mongo DB</p>
+                        <div className="d-flex justify-content-evenly ">
+                          <a className="btn projectbutton" href="https://github.com/AjithB2002/node-js_Crud_JWT" target="_blank" role="button">GitHub Link<FontAwesomeIcon icon={faBook} className="fa-fade px-2 " /></a>
+                        </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* .............. */}
             <div className="col">
               <div className="card h-100 procard">
                 <img src={moviebooking1} alt="Webite demo" className="card-img-top " />
                 <img src={moviebooking2} alt="Webite demo" className="card-img-top " />
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal6">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal5" tabIndex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                <div className="modal fade" id="exampleModal6" tabIndex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
                         <h1 className="modal-title fw-bold fs-3" id="exampleModalLabel5">BL MOVIE TICKET BOOKING WEBSITE</h1>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div> 
+                      </div>
                       <div className="modal-body">
                         <p className="card-text">The movie ticket booking website allows users to easily browse movies, check showtimes at nearby theaters, select seats, and purchase tickets online.</p>
                         <p className="card-text">It provides convenience by eliminating the need to visit theaters in person and offers options for different preferences, like choosing seats in advance and checking movie details. Users can create accounts for quicker bookings and enjoy features like notifications for confirmed bookings. Overall, it simplifies the process of planning and enjoying a trip to the movies.  </p>
@@ -64,16 +151,16 @@ function Project() {
               <div className="card h-100 procard">
                 <img src={weather2} alt="Webite demo" className="card-img-top " />
                 <img src={weather1} alt="Webite demo" className="card-img-top " />
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal5" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
                         <h1 className="modal-title fw-bold fs-3" id="exampleModalLabel">BL GLOBAL WEATHER GUIDE APPLICATION</h1>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div> 
+                      </div>
                       <div className="modal-body">
                         <p className="card-text">The Weather Application utilizes the OpenWeather API to access accurate and timely weather data. </p>
                         <p className="card-text"> The Weather Application keeps you updated with real-time weather forecasts tailored to your location and preferences. Whether you're planning your day, a weekend getaway, or a business trip. </p>
@@ -97,10 +184,10 @@ function Project() {
               <div className="card h-100 procard">
                 <img src={portfolio} alt="Webite demo" className="card-img-top " />
                 <img src={portfolio1} alt="Webite demo" className="card-img-top " />
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal4" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -161,10 +248,10 @@ function Project() {
             <div className="col">
               <div className="card h-100 procard">
                 <img src={stockproject} alt="demo img" className="card-img-top " width={"120px"} />
-                <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal2">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
-                <div className="modal fade" id="exampleModal4" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal2" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -204,11 +291,11 @@ function Project() {
             <div className="col">
               <div className="card h-100 procard">
                 <Link to={patrolpdf} target="_blank"><img src={patrolrobot} alt="patrol robot" className="card-img-top" /></Link>
-                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                   show more <FontAwesomeIcon icon={faArrowRight} className="fa-fade px-2 " />
                 </button>
 
-                <div className="modal fade" id="exampleModal7" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">

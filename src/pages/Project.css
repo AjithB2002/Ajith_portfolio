@@ -1,6 +1,8 @@
 #Project{
     background-color: rgb(25, 27, 48);
     padding-top: 110px;
+    overflow-x: hidden;
+    padding-bottom: 5px;
 }
 .project{
     font-weight: bold;
