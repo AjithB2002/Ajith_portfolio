@@ -10,7 +10,7 @@ function Contact() {
         <>
             <section id="Contact">
                 <div className="container text-center pt-5">
-                    <h1 className="text-center certificates"><span className="titledesign">C</span>ONTACT</h1>
+                    <h1 className="text-center contacthead"><span className="titledesign">C</span>ONTACT</h1>
                 </div>
             <section className=" py-3 py-md-5 py-xl-8 ">
                 <div className="container formedit py-2">

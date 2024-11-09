@@ -1,63 +1,89 @@
 import React from "react";
 import '../pages/Certificates.css';
-
-import codechef from '../assets/certificates/code chef java.png';
-import dbms from '../assets/certificates/DBMS photo.png';
-import greatlearning from '../assets/certificates/great learning java.png';
-import fullstackjava from '../assets/certificates/Full Stack Java Certificate.pdf';
-import ibm from '../assets/certificates/IBM project certificate.png';
-import ArtificalIntel from '../assets/certificates/Artifical intelligence certificate.png';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 function Certificates() {
+    const [sectionRef, sectionInView] = useInView({
+        triggerOnce: false,
+        threshold: 0.2,
+    });
+
+    const certificateVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: (index) => ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.6,
+                delay: index * 0.2, // Staggered animation delay
+            },
+        }),
+    };
+
+    const certifications = [
+        { name: 'Front End Development Libraries', imgSrc: 'https://www.freecodecamp.org/certification/Ajith_B/front-end-development-libraries' },
+        { name: 'Full Stack Java', imgSrc: 'https://drive.google.com/file/d/1Q4xv_3NmeMPnCvwgqOzQuCwzTz6ZK2za/view?usp=sharing' },
+        { name: 'Java (Basic)', imgSrc: 'https://www.hackerrank.com/certificates/df896a73f493' },
+        { name: 'Java Programming', imgSrc: 'https://www.mygreatlearning.com/certificate/WRBGGRKI' },
+        { name: 'Artificial Intelligence', imgSrc: 'https://drive.google.com/file/d/1655VO6zA1MZ3YZK45tG9GFAzAG6VfMVg/view?pli=1' },
+        { name: 'Low Code App Development', imgSrc: 'https://drive.google.com/file/d/1vx2ghHAIXNQNznnfiV7Kid4yaPeJ8wil/view?pli=1' },
+        { name: 'DataBase Programming with SQL', imgSrc: 'https://drive.google.com/file/d/1wa2UEr4JvepmYvTwmunsHWakwMAsd8m8/view?pli=1' },
+        { name: 'PHP and MySQL Training', imgSrc: 'https://drive.google.com/file/d/1vx_G0VHOVJFxaVQA84usQBbjJqpIk4Iz/view' },
+        { name: 'Usable Security', imgSrc: 'https://www.coursera.org/account/accomplishments/verify/S7SKVWZ4HDLL' }
+    ];
+
     return (
-        <>
-            <section id="Certificates">
-                <div className="container text-center pt-5">
-                    <h1 className="text-center certificates"><span className="titledesign">C</span>ERTIFICATES</h1>
-                    <div id="carouselExampleDark" className="carousel carousel-dark slide  certificationcarousel">
-                        <div className="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div>
-                        <div className="carousel-inner certificateinner">
-                            <div className="carousel-item active" data-bs-interval="10000">
-                                <img src={codechef} className="d-block w-100 " alt="..."/>
-                            </div>
-                            <div className="carousel-item" data-bs-interval="2000">
-                            <img src={dbms} className="d-block w-100" alt="..."/>
-                                    
-                            </div>
-                            <div className="carousel-item">
-                            <img src={greatlearning} className="d-block w-100" alt="..."/>
-                                   
-                            </div>
-                            <div className="carousel-item">
-                            <img src={ibm} className="d-block w-100" alt="..."/>
-                                   
-                            </div>
-                            <div className="carousel-item">
-                            <img src={ArtificalIntel} className="d-block w-100" alt="..."/>
-                            
-                            </div>
-                        </div>
-                        <button className="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </div>
+  <div className="bgcert">
+       <motion.section
+                id="certifications"
+                ref={sectionRef}
+                initial="hidden"
+                animate={sectionInView ? "visible" : "hidden"}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1, transition: { duration: 0.8 } }
+                }}
+            >
+                <motion.span
+                    className="cert-heading"
+                    variants={{
+                        hidden: { opacity: 0, y: -50 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+                    }}
+                >
+                     <span className='firstlettercert'>C</span>ertifications
+                </motion.span>
 
+                <motion.span
+                    className="cert-desc"
+                    variants={{
+                        hidden: { opacity: 0, y: -50 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+                    }}
+                >
+                     Validations of Expertise
+                </motion.span>
+
+                <div className="certificate-container pt-5">
+                    {certifications.map((cert, index) => (
+                        <motion.div
+                            key={index}
+                            className="certificate"
+                            initial="hidden"
+                            animate={sectionInView ? "visible" : "hidden"}
+                            variants={certificateVariants}
+                            custom={index} // Pass index for delay
+                        >
+                            <p>{cert.name}</p>
+                            <a className="link-underline link-underline-opacity-0" href={cert.imgSrc} target="_blank" rel="noopener noreferrer">View</a>
+                        </motion.div>
+                    ))}
                 </div>
-            </section>
+            </motion.section>
+  </div>
 
-
-        </>
+         
+    
     );
 }
-
 export default Certificates;

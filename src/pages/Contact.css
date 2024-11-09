@@ -1,7 +1,14 @@
 #Contact{
     background-color: rgb(25, 27, 48);
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.contacthead{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(193, 246, 255);
 }
 .formedit{
 

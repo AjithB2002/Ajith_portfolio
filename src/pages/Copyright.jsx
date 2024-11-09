@@ -12,7 +12,7 @@ function Copyright() {
                 <div className="container  ">
                     <div className="row">
                         <div className="col-md-6 text-center text-md-start">
-                            <p className="ctext">copyright © 2024 by BLGroups || All Right Reserved</p>
+                            <p className="ctext">Developed by AJITH B</p>
                         </div>
                         <div className="col-md-6 text-center text-md-end">
                             <ul className="list-inline">

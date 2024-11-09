@@ -1,7 +1,9 @@
 import React from "react";
 import '../pages/Project.css';
-
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faArrowRight, faBook, faPaperPlane, faPeopleGroup, faVideo } from '@fortawesome/free-solid-svg-icons';
 import hotelbooking from '../assets/Hotel-Booking.png';
 import hotelbooking1 from '../assets/Hotel-Booking1.png';
@@ -23,16 +25,51 @@ import nodejscrud1 from '../assets/nodejs_crud1.png';
 import { Link } from "react-router-dom";
 
 function Project() {
-
+  const [ref, inView] = useInView({ triggerOnce: false });
+  const projectVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (index) => ({
+      opacity: 1,
+      x: -0,
+      transition: {
+        duration: 0.4,
+        delay: index * 0.3, // Adds delay between each project card
+      },
+    }),
+  };
   return (
     <>
-      <section id="Project">
-        <div className="container text-center pt-5">
-          <h1 className="text-center project"><span className="titledesign">P</span>ROJECTS</h1>
+     <section id="Project">
+   
+      <div className="container text-center pt-2">
+          <motion.h1
+            className="text-center project"
+            initial={{ opacity: 0, y: -20 }}
+            custom={0}
+            animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.3 } } : {}}
+          >
+            <span className="titledesign">P</span>ROJECTS
+          </motion.h1>
+          <motion.p
+            className="projectDesc"
+            initial={{ opacity: 0, y: -20 }}
+            custom={1}
+            animate={inView ? { opacity: 1, y: 0, transition: { duration: 0.3 } } : {}}
+            >
+             <span className="projectDesc">Showcase of Applied Expertise</span>
+          </motion.p>
           {/* --------------------------------- */}
+          <div  ref={ref} className={`scroll-container ${inView ? 'animate' : ''}`}>
           <div className="row row-cols-1 row-cols-md-4 g-5 pt-5">
             {/* ................... */}
-            <div className="col">
+           
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={0} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={todo1} alt="Webite demo" className="card-img-top " />
                 <img src={todo} alt="Webite demo" className="card-img-top " />
@@ -73,9 +110,15 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+              </motion.div>
             {/* ................... */}
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={1} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={nodejscrud} alt="Webite demo" className="card-img-top " />
                 <img src={nodejscrud1} alt="Webite demo" className="card-img-top " />
@@ -113,9 +156,15 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* .............. */}
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={3} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={moviebooking1} alt="Webite demo" className="card-img-top " />
                 <img src={moviebooking2} alt="Webite demo" className="card-img-top " />
@@ -145,9 +194,15 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* ........... */}
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={4} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={weather2} alt="Webite demo" className="card-img-top " />
                 <img src={weather1} alt="Webite demo" className="card-img-top " />
@@ -178,9 +233,15 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* ........... */}
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={5} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={portfolio} alt="Webite demo" className="card-img-top " />
                 <img src={portfolio1} alt="Webite demo" className="card-img-top " />
@@ -209,10 +270,16 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* ....... */}
 
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={6} // Adjust custom value for each card if needed
+            >
               <div className="card h-100  procard">
                 <img src={hotelbooking} alt="Webite demo" className="card-img-top " />
                 <img src={hotelbooking1} alt="Webite demo" className="card-img-top  " />
@@ -242,10 +309,16 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* ........ */}
 
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={7} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <img src={stockproject} alt="demo img" className="card-img-top " width={"120px"} />
                 <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -283,12 +356,18 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
 
 
             {/* ........... */}
-            <div className="col">
+            <motion.div
+              className="col"
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              variants={projectVariants}
+              custom={8} // Adjust custom value for each card if needed
+            >
               <div className="card h-100 procard">
                 <Link to={patrolpdf} target="_blank"><img src={patrolrobot} alt="patrol robot" className="card-img-top" /></Link>
                 <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
@@ -324,11 +403,14 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* ........... */}
+          </div>
           </div>
           {/* --------------------------------- */}
         </div>
+     
+
       </section>
     </>
   );

@@ -22,7 +22,7 @@ function Home() {
                             <h3 >Hi, It's Me</h3>
                             <h1 className='name'><span className='firstletter'>A</span>jith B</h1>
                             <h2 className='name1'>And I'm a <span className='animate-charcter'>Full Stack Developer</span></h2>
-                            <p className='fs-5 mt-2'>Diligent and enthusiastic Full Stack Developer with additional skills in Java Programming and Database Management. Eager to leverage my skills and contribute to dynamic projects. Collaborative team player with passion for problem-solving.</p>
+                            <p className='fs-5 mt-2'>Diligent and enthusiastic Full Stack Developer with additional skills in Java Programming and Database Management. Currently gaining valuable hands-on experience through an internship at Alpha Business Solutions Pvt Ltd. Eager to leverage my skills and contribute to dynamic projects. A collaborative team player with a passion for problem-solving</p>
                             <div className='row'>
                                 <div className='col-6'>
                                     <p><FontAwesomeIcon icon={faEnvelope} /> Email:</p>

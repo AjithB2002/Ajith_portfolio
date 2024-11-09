@@ -1,40 +1,83 @@
-#Certificates{
+
+ 
+.bgcert{
     background-color: rgb(25, 27, 48);
-    padding-top: 110px;
-    padding-bottom: 50px;
 }
 
-.titledesign{
-    font-weight: bold;
- font-family: 'Times New Roman', Times, serif;
- font-size: 50px;
- color: rgb(255,215,0);
+  #certifications {
+   padding-top: 5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+
 }
-.certificates{
+
+.cert-heading {
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
     color: rgb(193, 246, 255);
+}
+.firstlettercert{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(255,215,0);
+}
+.cert-desc{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: grey;
+}
+
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.certificate {
+    padding: 1.3rem;
+    background-color: #0d0073;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1.5rem;
+    border-radius: 20px;
+    width: 100%; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgb(17, 186, 216);
+    color: rgb(235, 245, 255);
+}
+
+.certificate p {
+    margin: 0;
+}
+
+.certificate a {
+    color: white;
+    border: 1px solid grey; 
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    margin-left: auto; 
+}
+
+@media screen and (max-width:450px) {
+   .certificate {
+        width: 90vw;
+        max-width: none;
    }
-.certificationcarousel{
-    padding-top: 60px;
-}
 
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    outline: rgb(255, 255, 255);
-    background-color: rgb(150, 93, 93);
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    border: 1px solid rgb(255, 255, 255);
+    .cert-heading {
+        font-size: 2rem;
+    }
 }
-.carousel-item > img {
- 
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 44rem;
-    margin: 0 auto;
-  }

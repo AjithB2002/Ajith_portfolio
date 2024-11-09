@@ -24,7 +24,12 @@
  
    
 }
-
+.projectDesc {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: grey;
+}
 
 .glow-on-hover {
     width: auto;
