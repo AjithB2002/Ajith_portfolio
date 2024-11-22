@@ -26,17 +26,6 @@ import { Link } from "react-router-dom";
 
 function Project() {
   const [ref, inView] = useInView({ triggerOnce: false });
-  const projectVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: (index) => ({
-      opacity: 1,
-      x: -0,
-      transition: {
-        duration: 0.4,
-        delay: index * 0.3, // Adds delay between each project card
-      },
-    }),
-  };
   return (
     <>
      <section id="Project">
@@ -59,17 +48,11 @@ function Project() {
              <span className="projectDesc">Showcase of Applied Expertise</span>
           </motion.p>
           {/* --------------------------------- */}
-          <div  ref={ref} className={`scroll-container ${inView ? 'animate' : ''}`}>
+    
           <div className="row row-cols-1 row-cols-md-4 g-5 pt-5">
             {/* ................... */}
            
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={0} // Adjust custom value for each card if needed
-            >
+            <div className="col">
               <div className="card h-100 procard">
                 <img src={todo1} alt="Webite demo" className="card-img-top " />
                 <img src={todo} alt="Webite demo" className="card-img-top " />
@@ -104,21 +87,15 @@ function Project() {
                         </div>
                       </div>
                       <div className="modal-footer">
-                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn contactclosebtn" data-bs-dismiss="modal" aria-label="Close">Close</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              </motion.div>
+              </div>
             {/* ................... */}
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={1} // Adjust custom value for each card if needed
-            >
+            <div className="col" >
               <div className="card h-100 procard">
                 <img src={nodejscrud} alt="Webite demo" className="card-img-top " />
                 <img src={nodejscrud1} alt="Webite demo" className="card-img-top " />
@@ -156,15 +133,9 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* .............. */}
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={3} // Adjust custom value for each card if needed
-            >
+            <div className="col">
               <div className="card h-100 procard">
                 <img src={moviebooking1} alt="Webite demo" className="card-img-top " />
                 <img src={moviebooking2} alt="Webite demo" className="card-img-top " />
@@ -194,15 +165,9 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* ........... */}
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={4} // Adjust custom value for each card if needed
-            >
+            <div className="col">
               <div className="card h-100 procard">
                 <img src={weather2} alt="Webite demo" className="card-img-top " />
                 <img src={weather1} alt="Webite demo" className="card-img-top " />
@@ -233,15 +198,9 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* ........... */}
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={5} // Adjust custom value for each card if needed
-            >
+            <div className="col" >
               <div className="card h-100 procard">
                 <img src={portfolio} alt="Webite demo" className="card-img-top " />
                 <img src={portfolio1} alt="Webite demo" className="card-img-top " />
@@ -270,16 +229,10 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* ....... */}
 
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={6} // Adjust custom value for each card if needed
-            >
+            <div className="col">
               <div className="card h-100  procard">
                 <img src={hotelbooking} alt="Webite demo" className="card-img-top " />
                 <img src={hotelbooking1} alt="Webite demo" className="card-img-top  " />
@@ -309,16 +262,10 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* ........ */}
 
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={7} // Adjust custom value for each card if needed
-            >
+            <div className="col">
               <div className="card h-100 procard">
                 <img src={stockproject} alt="demo img" className="card-img-top " width={"120px"} />
                 <button type="button" className="btn glow-on-hover text-light " data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -356,18 +303,12 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
 
 
             {/* ........... */}
-            <motion.div
-              className="col"
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={projectVariants}
-              custom={8} // Adjust custom value for each card if needed
-            >
+            <div className="col"  >
               <div className="card h-100 procard">
                 <Link to={patrolpdf} target="_blank"><img src={patrolrobot} alt="patrol robot" className="card-img-top" /></Link>
                 <button type="button" className="btn glow-on-hover text-light" data-bs-toggle="modal" data-bs-target="#exampleModal1">
@@ -403,10 +344,10 @@ function Project() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
             {/* ........... */}
           </div>
-          </div>
+       
           {/* --------------------------------- */}
         </div>
      
@@ -416,4 +357,3 @@ function Project() {
   );
 }
 export default Project;
-
