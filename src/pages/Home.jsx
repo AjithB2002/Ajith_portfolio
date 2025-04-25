@@ -2,6 +2,7 @@ import React from 'react';
 import '../pages/Home.css';
 import Ajith from '../assets/Ajith.jpg';
 import Skills from '../pages/Skills';
+import Experience from '../pages/Experience'
 import Project from '../pages/Project';
 import Resume from '../assets/Resume.pdf';
 import Certificates from '../pages/Certificates';
@@ -9,11 +10,11 @@ import Contact from '../pages/Contact';
 import Copyright from '../pages/Copyright';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-function Home() { 
+function Home() {
     return (
-        
+
         <>
             <section id="Home">
                 <div className="container">
@@ -22,7 +23,10 @@ function Home() {
                             <h3 >Hi, It's Me</h3>
                             <h1 className='name'><span className='firstletter'>A</span>jith B</h1>
                             <h2 className='name1'>And I'm a <span className='animate-charcter'>Full Stack Developer</span></h2>
-                            <p className='fs-5 mt-2'>Diligent and enthusiastic Full Stack Developer with additional skills in Java Programming and Database Management. Currently gaining valuable hands-on experience through an internship at Alpha Business Solutions Pvt Ltd. Eager to leverage my skills and contribute to dynamic projects. A collaborative team player with a passion for problem-solving</p>
+                            <p className='fs-5 mt-2'>
+                                Diligent and enthusiastic Junior Backend Developer at Capecom Solution Pvt Ltd. Passionate about building efficient and scalable server-side applications. Eager to leverage my skills and contribute to dynamic projects. A collaborative team player with a passion for problem-solving and continuous learning.
+                            </p>
+
                             <div className='row'>
                                 <div className='col-6'>
                                     <p><FontAwesomeIcon icon={faEnvelope} /> Email:</p>
@@ -32,7 +36,7 @@ function Home() {
                                 <div className='col-6 '>
                                     <p><FontAwesomeIcon icon={faPhone} /> Contact No:</p>
                                     <p className='h5'> <Link className="link-light text-decoration-none" to="tel:8870280961">+91 8870280961</Link></p>
-                                   
+
                                     <Link to="/contact">  <button className="btn btn-outline-info btn-large mt-3 ">Hire Me!</button></Link>
                                 </div>
                             </div>
@@ -44,15 +48,16 @@ function Home() {
                 </div>
             </section>
             <Skills />
+            <Experience />
             <Project />
             <Certificates />
             <Contact />
             <Copyright />
-            
+
 
         </>
 
     );
-   
+
 }
 export default Home;
