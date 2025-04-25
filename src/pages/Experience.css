@@ -1,206 +1,208 @@
 
-
-
-/* Experience.css */
 :root {
     --primary-gradient: linear-gradient(45deg, #FF6B6B, #4ECDC4);
     --secondary-gradient: linear-gradient(45deg, #45B7D1, #4A90E2);
     --accent-gradient: linear-gradient(45deg, #FF8E53, #FE6B8B);
     --success-gradient: linear-gradient(45deg, #43E97B, #38F9D7);
   }
-
-
-  .title-underline {
-      width: 80px;
-      height: 4px;
-      background: var(--primary-gradient);
-      margin: 15px auto;
-      border-radius: 2px;
+  
+  #Experience {
+    background-color: rgb(25, 27, 48) !important;
+    position: relative;
+    overflow: hidden;
   }
   
+  /* Background animation effect */
+  #Experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+    animation: pulse 15s infinite;
+  }
+  
+  /* --- 3. TITLE STYLING --- */
   .titledesign {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
   
+  .title-underline {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-gradient);
+    margin: 15px auto;
+    border-radius: 2px;
+  }
+  
+  /* --- 4. CARD STYLING (SHARED) --- */
   .experience-card,
   .education-card {
-      transition: all 0.3s ease;
-      border-radius: 15px !important;
-      overflow: hidden;
-      position: relative;
-
+    transition: all 0.3s ease;
+    border-radius: 15px !important;
+    overflow: hidden;
+    position: relative;
+    animation: borderAnimation 10s infinite;
   }
   
-  .experience-card {
-      border-left: 5px solid #4ECDC4 !important;
-  }
-  
-  .education-card {
-      border-left: 5px solid #43E97B !important;
-  }
-  
+  /* Hover effects */
   .experience-card:hover,
   .education-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
   }
   
+  /* Card background decorative element */
   .experience-card::before,
   .education-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+  
+  /* Glow effect on hover */
+  .experience-card:hover::after,
+  .education-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+    border-radius: 15px;
+    z-index: -1;
+  }
+  
+  /* --- 5. SPECIFIC CARD TYPES --- */
+  /* Experience card specific */
+  .experience-card {
+    border-left: 5px solid #4ECDC4 !important;
+  }
+  
+  .experience-card::before {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
+  }
+  
+  /* Education card specific */
+  .education-card {
+    border-left: 5px solid #43E97B !important;
   }
   
   .education-card::before {
-      background: linear-gradient(135deg, rgba(67, 233, 123, 0.1), rgba(56, 249, 215, 0.1));
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.1), rgba(56, 249, 215, 0.1));
   }
   
-  .btn-group .btn-primary {
-      background: var(--primary-gradient) !important;
-      border: none;
-      position: relative;
-      z-index: 1;
-  }
-  
-  .btn-group .btn-outline-primary {
-      background: transparent;
-      border: 2px solid #4ECDC4;
-      color: #4ECDC4;
-  }
-  
-  .btn-group .btn-outline-primary:hover {
-      background: var(--primary-gradient);
-      border-color: transparent;
-      color: white;
-  }
-  
-  .badge.bg-primary {
-      background: var(--secondary-gradient) !important;
-  }
-  
-  .badge.bg-success {
-      background: var(--success-gradient) !important;
+  /* --- 6. CARD CONTENTS --- */
+  .card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
   }
   
   .card-title {
-      background: var(--secondary-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: bold !important;
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold !important;
   }
   
   .list-unstyled li i {
-      color: #4ECDC4;
+    color: #4ECDC4;
   }
   
-  /* Glowing effect on hover */
-  .experience-card:hover::after,
-  .education-card:hover::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
-      border-radius: 15px;
-      z-index: -1;
+  /* Date styling */
+  .text-muted i {
+    color: #4ECDC4;
+    text-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
   }
   
-  /* Animated background for section */
-  #Experience {
-    background-color: rgb(25, 27, 48) !important;
-      position: relative;
-      overflow: hidden;
+  /* --- 7. BUTTONS & BADGES --- */
+  .btn-group .btn-primary {
+    background: var(--primary-gradient) !important;
+    border: none;
+    position: relative;
+    z-index: 1;
   }
   
-  #Experience::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
-      animation: pulse 15s infinite;
+  .btn-group .btn-outline-primary {
+    background: transparent;
+    border: 2px solid #4ECDC4;
+    color: #4ECDC4;
   }
   
-  @keyframes pulse {
-      0% {
-          transform: scale(1);
-          opacity: 0.5;
-      }
-      50% {
-          transform: scale(1.5);
-          opacity: 0.2;
-      }
-      100% {
-          transform: scale(1);
-          opacity: 0.5;
-      }
+  .btn-group .btn-outline-primary:hover {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    color: white;
   }
   
-  /* Custom scrollbar with gradient */
+  .badge.bg-primary {
+    background: var(--secondary-gradient) !important;
+  }
+  
+  .badge.bg-success {
+    background: var(--success-gradient) !important;
+  }
+  
+  /* --- 8. SCROLLBAR STYLING --- */
   ::-webkit-scrollbar {
-      width: 8px;
+    width: 8px;
   }
   
   ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+    background: #f1f1f1;
   }
   
   ::-webkit-scrollbar-thumb {
-      background: var(--primary-gradient);
-      border-radius: 4px;
+    background: var(--primary-gradient);
+    border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-      background: var(--secondary-gradient);
+    background: var(--secondary-gradient);
   }
   
-  /* Neon text effect for dates */
-  .text-muted i {
-      color: #4ECDC4;
-      text-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
+  /* --- 9. ANIMATIONS --- */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
   }
   
-  /* Rainbow border animation */
   @keyframes borderAnimation {
-      0% {
-          border-color: #FF6B6B;
-      }
-      25% {
-          border-color: #4ECDC4;
-      }
-      50% {
-          border-color: #43E97B;
-      }
-      75% {
-          border-color: #4A90E2;
-      }
-      100% {
-          border-color: #FF6B6B;
-      }
-  }
-  
-  .experience-card,
-  .education-card {
-      animation: borderAnimation 10s infinite;
-  }
-  
-  /* Glassmorphism effect */
-  .card {
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.9);
+    0% {
+      border-color: #FF6B6B;
+    }
+    25% {
+      border-color: #4ECDC4;
+    }
+    50% {
+      border-color: #43E97B;
+    }
+    75% {
+      border-color: #4A90E2;
+    }
+    100% {
+      border-color: #FF6B6B;
+    }
   }

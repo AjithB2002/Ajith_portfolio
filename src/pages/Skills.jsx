@@ -17,7 +17,9 @@ import nodejs from '../assets/skills/nodejs-logo.png';
 import mongodb from '../assets/skills/mongodb-logo.png';
 import bitbucket from '../assets/skills/bitbucket.png';
 import express from '../assets/skills/express.png';
-import nextjs from '../assets/skills/next js.png';
+// import nextjs from '../assets/skills/next js.png';
+import laravel from '../assets/skills/laravel.png';
+import tailwind from '../assets/skills/tailwind.png';
 
 function Skills() {
   const [ref, inView] = useInView({ triggerOnce: false });
@@ -51,10 +53,11 @@ function Skills() {
       skills: [
         { name: 'React JS', imgSrc: reactlogo },
         { name: 'JavaScript', imgSrc: jslogo },
-        { name: 'Next js', imgSrc: nextjs },
+        // { name: 'Next js', imgSrc: nextjs },
         { name: 'HTML5', imgSrc: htmllogo },
         { name: 'CSS3', imgSrc: csslogo },
         { name: 'Bootstrap', imgSrc: bootstraplogo },
+        { name: 'Tailwind', imgSrc: tailwind }
       ],
     },
     {
@@ -68,7 +71,7 @@ function Skills() {
         { name: 'Spring Boot', imgSrc: springlogo },
         { name: 'MongoDB', imgSrc: mongodb },
         { name: 'PostgreSQL', imgSrc: postgresql },
-        { name: 'Python', imgSrc: 'https://cdn.iconscout.com/icon/free/png-512/free-python-2-226051.png?f=webp&w=256' },
+        { name: 'Laravel', imgSrc: laravel },
       ],
     },
     {

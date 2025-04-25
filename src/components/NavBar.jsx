@@ -18,10 +18,13 @@ function NavigationBar() {
       <div className=" collapse navbar-collapse " id="navbarNavDropdown">
         <ul className="navbar-nav ms-auto mt-sm-2 ">
         <li className="nav-item">
-              <Link className="nav-link mx-2 active " aria-current="page" to="Ajith_portfolio/">Home</Link>
+              <Link className="nav-link mx-2 active " aria-current="page" to="">Home</Link>
             </li>
           <li className="nav-item">
             <Link className="nav-link mx-2 " to="/skills">Skills</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link mx-2 " to="/experience">Experience</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link mx-2" to="/project">Project</Link>

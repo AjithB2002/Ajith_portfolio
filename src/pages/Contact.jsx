@@ -1,4 +1,4 @@
-import { useState, useRef,React } from "react";
+import { useState, useRef, React } from "react";
 import emailjs from "@emailjs/browser";
 import "../pages/Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,67 +10,67 @@ import {
 import { Link } from "react-router-dom";
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        fullname: '',
-        email: '',
-        phone: '',
-        message: ''
-    });
+  const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-    const form = useRef(); 
+  const form = useRef();
 
-    
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+    if (!formData.fullname || !formData.email || !formData.message) {
+      setErrorMessage('Please fill out all required fields.');
+      return;
+    }
+
+
+    const serviceId = 'service_762002';
+    const templateId = 'template_fur6e8z';
+    const userId = 'JroXg5Cw2mWtbxdaC';
+
+
+    const templateParams = {
+      From_name: formData.fullname,
+      From_email: formData.email,
+      From_phone: formData.phone || 'N/A',
+      Message: formData.message
     };
 
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
 
-       
-        if (!formData.fullname || !formData.email || !formData.message) {
-            setErrorMessage('Please fill out all required fields.');
-            return;
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setIsSubmitted(true);
+          setFormData({
+            fullname: '',
+            email: '',
+            phone: '',
+            message: ''
+          });
+          setErrorMessage('');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setErrorMessage('There was an issue with your submission. Please try again later.');
         }
-
-
-        const serviceId = 'service_762002'; 
-        const templateId = 'template_fur6e8z'; 
-        const userId = 'JroXg5Cw2mWtbxdaC'; 
-
-        
-        const templateParams = {
-            From_name: formData.fullname,
-            From_email: formData.email,
-            From_phone: formData.phone || 'N/A',
-            Message: formData.message
-        };
-
-       
-        emailjs.send(serviceId, templateId, templateParams, userId)
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    setIsSubmitted(true);
-                    setFormData({
-                        fullname: '',
-                        email: '',
-                        phone: '',
-                        message: ''
-                    });
-                    setErrorMessage('');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    setErrorMessage('There was an issue with your submission. Please try again later.');
-                }
-            );
-    };
+      );
+  };
   return (
     <>
       <section id="Contact">
@@ -95,13 +95,12 @@ function Contact() {
                       <div>
                         <h4 className="mb-3">
                           <Link className="text-light fs-4 px-1 ">
-                            <FontAwesomeIcon icon={faLocationDot} />
+                            <FontAwesomeIcon icon={faLocationDot} className="fa-fade" />
                           </Link>{" "}
                           Address
                         </h4>
                         <address className="mb-0 text-light">
-                          11-12E, Puthuvlai, Thalakulam post, Kanyakumari
-                          disrict, TamiNadu.{" "}
+                          11-12E, Puthuvlai, Kanyakumari disrict, TamiNadu,India.{" "}
                         </address>
                       </div>
                     </div>
@@ -111,7 +110,7 @@ function Contact() {
                           <div>
                             <h4 className="mb-3">
                               <Link className="text-light fs-4 px-1 ">
-                                <FontAwesomeIcon icon={faPhone} />
+                                <FontAwesomeIcon icon={faPhone}  className="fa-fade"  />
                               </Link>{" "}
                               Phone
                             </h4>
@@ -131,7 +130,7 @@ function Contact() {
                           <div>
                             <h4 className="mb-3">
                               <Link className="text-light fs-4 px-1 ">
-                                <FontAwesomeIcon icon={faEnvelope} />
+                                <FontAwesomeIcon icon={faEnvelope}  className="fa-fade"  />
                               </Link>{" "}
                               E-Mail
                             </h4>
@@ -152,33 +151,55 @@ function Contact() {
               </div>
               <div className="col-12 col-lg-6">
                 <div className="bg-white border rounded shadow-sm overflow-hidden">
-                <form ref={form} onSubmit={handleSubmit}>
-                                        <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
-                                            <div className="col-12">
-                                                <label htmlFor="fullname" className="form-label">Full Name <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" id="fullname" name="fullname" value={formData.fullname} onChange={handleChange} required />
-                                            </div>
-                                            <div className="col-12 col-md-6">
-                                                <label htmlFor="email" className="form-label">Email <span className="text-danger">*</span></label>
-                                                <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
-                                            </div>
-                                            <div className="col-12 col-md-6">
-                                                <label htmlFor="phone" className="form-label">Phone Number</label>
-                                                <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
-                                            </div>
-                                            <div className="col-12">
-                                                <label htmlFor="message" className="form-label">Message <span className="text-danger">*</span></label>
-                                                <textarea className="form-control" id="message" name="message" rows="3" value={formData.message} onChange={handleChange} required></textarea>
-                                            </div>
-                                            <div className="col-12">
-                                                <div className="d-grid contactbuttonedit">
-                                                    <button className="btn btn-lg" type="submit">Send Message</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    {isSubmitted && <p className="text-success mt-3">Your message has been sent successfully!</p>}
-                                    {errorMessage && <p className="text-danger mt-3">{errorMessage}</p>}
+                  <form ref={form} onSubmit={handleSubmit}>
+                    <div className="row gy-4 gy-xl-5 p-4 p-xl-5">
+                      <div className="col-12">
+                        <label htmlFor="fullname" className="form-label">Full Name <span className="text-danger">*</span></label>
+                        <input type="text" className="form-control" id="fullname" name="fullname" value={formData.fullname} onChange={handleChange} required />
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <label htmlFor="email" className="form-label">Email <span className="text-danger">*</span></label>
+                        <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <label htmlFor="phone" className="form-label">Phone Number <span className="text-danger">*</span></label>
+                        <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+                      </div>
+                      <div className="col-12">
+                        <label htmlFor="message" className="form-label">Message <span className="text-danger">*</span></label>
+                        <textarea className="form-control" id="message" name="message" rows="3" value={formData.message} onChange={handleChange} required></textarea>
+                      </div>
+                      <div className="col-12">
+                        <div className="d-grid contactbuttonedit">
+                          <button className="btn btn-lg" type="submit">Send Message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  {isSubmitted && (
+                    <div className="thank-you-overlay">
+                      <div className="thank-you-popup">
+                        <div className="popup-icon">
+                          <i className="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your message has been sent successfully. I'll get back to you soon.</p>
+                        <button
+                          className="close-popup-btn"
+                          onClick={() => setIsSubmitted(false)}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {errorMessage && (
+                    <div className="alert alert-danger mt-3" role="alert">
+                      <i className="fas fa-exclamation-circle me-2"></i>
+                      {errorMessage}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
