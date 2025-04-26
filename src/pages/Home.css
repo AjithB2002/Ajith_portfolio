@@ -1,101 +1,139 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-*{  
+* {
     font-family: sans-serif;
-    
 }
-#Home{
+
+#Home {
     background-color: rgb(25, 27, 48);
     padding-top: 120px;
     color: #fff;
 }
 
-
-.animate-charcter
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #2f22be 0%,
-    #5811a4 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
-      font-size: 50px;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 600;
-      
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #2f22be 0%,
+        #5811a4 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
 }
 
 @keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+    to {
+        background-position: 200% center;
+    }
 }
 
-.name1{
-font-size: 30px;
+.name1 {
+    font-size: 30px;
 }
-.name{
+
+.name {
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     font-weight: 400;
 }
-.firstletter{
+
+.firstletter {
     color: #fff800;
     font-family: 'Times New Roman', Times, serif;
 }
+
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .myimg {
-        width: 350px;
-        height: auto;
-        border: 5px solid rgb(0, 208, 255);
-        border-radius: 50%;
-      }
-      
-      
-      @media only screen and (max-width: 992px) {
-        .col-md-8, .col-md-4 {
-          width: 100%;
-          align-items: center;
-          text-align: center;
+  margin-top: 20px;
+  height:450px;
+  object-fit: contain;
+  margin: 0 auto;
+  text-align: center;
+  border: 5px solid rgb(0, 208, 255);
+  box-shadow: 0 0 10px 2px #fff800;
+  border-radius: 10%;
+  animation: rotate 5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(360deg);
+  }
+}
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 992px) {
+    .col-md-8, .col-md-4 {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .myimg {
+        margin-top: 20px;
+        height: 430px;
+        object-fit: contain;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0 0 10px 2px #fff800;
+        border-radius: 10%;
+        animation: rotate 5s ease-in-out infinite;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotateY(0deg);
         }
-        
-        .myimg {
-            margin-top: 20px;
-          height: 100%;
-          object-fit: contain;
-          margin: 1;
-          text-align: center;
+        100% {
+            transform: rotateY(360deg);
         }
-        
-        h1, h2, h3 {
-          font-size: 20px;
-          margin-top: 0;
-          margin-bottom: 15px
-          
-        }
-        p{
-            text-align: justify;
-        }
-        
-        .btn {
-          font-size: 13px;
-        }
-        
-        .animate-charcter {
-          padding-top: 13px;
-          padding-bottom: 5px;
-          font-size: 29px;
-        }
-        
-      }
+    }
+    
+    h1, h2, h3 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        text-align: justify;
+    }
+    
+    .btn {
+        font-size: 13px;
+    }
+    
+    .animate-charcter {
+        padding-top: 13px;
+        padding-bottom: 5px;
+        font-size: 29px;
+    }
+}
